@@ -15,6 +15,12 @@ class CreateAccessRolesTable extends Migration
     {
         Schema::create('access_roles', function (Blueprint $table) {
             $table->id();
+            $table->string('access_name');
+            $table->foreignId('options_lists_id')
+                ->constrained()
+                ->onDelete('cascade');
+            $table->integer('roles_id');
+            $table->boolean('status')->default(false);
             $table->timestamps();
         });
     }

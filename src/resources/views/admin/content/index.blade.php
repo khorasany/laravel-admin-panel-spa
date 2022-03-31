@@ -471,10 +471,8 @@
                 </div>
             </div>
             <!-- Row ends -->
-
         </div>
         <!-- Content wrapper end -->
-
     </div>
 @endsection
 @section('js')
